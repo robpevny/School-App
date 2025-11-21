@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+// component decorator is use to define associated metadata
 @Component({
   selector: 'course',
   standalone: false,
@@ -8,5 +10,12 @@ import { Component } from '@angular/core';
 })
 export class Course {
   title: string = 'List of Courses';
-  courses: string[] = ['Math 101', 'Science 101', 'Biology 100'];
+  courses: Icourse[] = [];
+
+  // dependency injection
+  // when this component is created, angular will find and inject an instance of this class in here and assign it to variable
+  constructor(courseService: CourseService) {
+    // let courseService = new CourseService();
+    this.courses = courseService.getCourses();
+  }
 }

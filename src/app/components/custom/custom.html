@@ -51,4 +51,6 @@
 <!-- Event binding () is when we bind a function from component to DOM element-->
 <button (click)="sampleFunc()">Click me!</button>
 <!-- Two way binding: [(ngModel)] updates the compoment and DOM in both directions -->
-<input type="email" [(ngModel)]="email" >
+<!-- Template variable: #variableName is a referece to a DOM element within our htm template-->
+<input #emailRef type="email" [(ngModel)]="email" />
+<p>{{emailRef.value}}</p>

@@ -48,5 +48,7 @@
   box
 </div>
 
-<!-- Event binding ()-->
+<!-- Event binding () is when we bind a function from component to DOM element-->
 <button (click)="sampleFunc()">Click me!</button>
+<!-- Two way binding: [(ngModel)] updates the compoment and DOM in both directions -->
+<input type="email" [(ngModel)]="email" >

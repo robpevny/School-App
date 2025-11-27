@@ -16,6 +16,7 @@ export class Custom {
   colSpan = 2;
   boxSize = 150;
   boxColor = 'blue';
+  email = "Shareg@robo.com";
 
   sampleFunc() {
     console.log('sample function called');

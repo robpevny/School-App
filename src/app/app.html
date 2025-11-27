@@ -1,9 +1,10 @@
-<!-- string interpolation {{}} is used to render dynamic content-->
-<h1>{{ 4 > 3 ? title : "No title" }}</h1>
-<!-- What are directives?-->
-<!-- constructions which tell angular to manipulate DOM element-->
+<navbar></navbar>
+<!-- String Interpolation: {{}} is used to render dynamic conent. We can even write Javascript expressions in them. -->
+<h1>{{ 4 > 3 ? title : "No Title" }}</h1>
+<!-- What are directives? -->
+<!-- Directives are instructions which tell Angular to manipulate the DOM elements. -->
 <!-- ngIf, ngFor, ngSwitch, ngStyle, ngClass -->
-<custom ngIf="2 > 1"></custom>
+<custom *ngIf="2 > 1"></custom>
 
 <course></course>
 

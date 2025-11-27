@@ -1,4 +1,4 @@
 export interface Icourse {
-    name: string;
-    title: string;
+  name: string;
+  level: number;
 }

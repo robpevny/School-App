@@ -5,22 +5,14 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Custom } from './components/custom/custom';
 import { Course } from './components/course/course';
+import { Navbar } from './components/navbar/navbar';
 
-// you can thing of angular module like a folder in your project that tells angular what' s inside it
+// You can think of an Angular module like a folder in your project that tells Angular what;s inside it and how the pieces work together.
 @NgModule({
   // components/directives/pipes belong to this module
-  declarations: [
-    App,
-    Custom,
-    Course
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [
-    provideBrowserGlobalErrorListeners()
-  ],
-  bootstrap: [App]
+  declarations: [App, Custom, Course, Navbar],
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}

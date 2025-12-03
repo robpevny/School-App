@@ -48,9 +48,10 @@
   box
 </div>
 
-<!-- Event binding () is when we bind a function from component to DOM element-->
+<!-- Event binding () is when we bind a function from the component to DOM elements -->
 <button (click)="sampleFunc()">Click me!</button>
-<!-- Two way binding: [(ngModel)] updates the compoment and DOM in both directions -->
-<!-- Template variable: #variableName is a referece to a DOM element within our htm template-->
+
+<!-- Two way binding: [(ngModel)] updates the component and DOM in both directions -->
+<!-- Template variables: #variableName is a reference to a DOM element within our html template -->
 <input #emailRef type="email" [(ngModel)]="email" />
-<p>{{emailRef.value}}</p>
+<p>{{ emailRef.value }}</p>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Custom } from './custom';
+import { CourseForm } from './course-form';
 
-describe('Custom', () => {
-  let component: Custom;
-  let fixture: ComponentFixture<Custom>;
+describe('CourseForm', () => {
+  let component: CourseForm;
+  let fixture: ComponentFixture<CourseForm>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Custom]
+      declarations: [CourseForm]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Custom);
+    fixture = TestBed.createComponent(CourseForm);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

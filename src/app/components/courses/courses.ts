@@ -33,8 +33,17 @@ export class Courses implements OnChanges, OnInit, DoCheck, OnDestroy {
 
   message: any;
 
-  alertMessage(message: any) {
-    this.message = message;
+  deleteCourse(id: number) {
+    this.courseService.deleteCourse(id).subscribe((result) => {
+      // find course in courses array
+      let course = this.courses.find((c) => c.id === result.id);
+
+      // if course is undefined, return early
+      if (!course) return;
+
+      // remove the course from courses
+      this.courses.splice(this.courses.indexOf(course), 1);
+    });
   }
 
   // 2. ngOnChanges runs when @Input property changes from undefined to a value
@@ -46,7 +55,10 @@ export class Courses implements OnChanges, OnInit, DoCheck, OnDestroy {
   ngOnInit(): void {
     // create instance of service class
     // let courseService = new CourseService();
-    this.courses = this.courseService.getCourses();
+    // Since the getCourses method returns an Observable object, we need to use the subscribe method to hand the return data
+    this.courseService.getCourses().subscribe((results) => {
+      this.courses = results; // results is going to be if type Icourse[]
+    });
     console.log('Courses ngOnInit');
   }
 
